@@ -1,14 +1,10 @@
-# python-program
-python tic-tac-toe
-
 import random
 
 
 
 def NewGame(self):
         self.GameBoard = [" "," "," "," "," "," "," "," "," "]
-
-        self.PlayerPiece = "O"
+	self.PlayerPiece = "O"
         self.OpponentPiece = "X"
         
 
@@ -29,8 +25,8 @@ def Move(self, MoveFromOpponent):
     MyMove = random.randint(1,9)
 
         
-    while self.GameBoard[MyMove - 1] != " ":
-        MyMove = random.randint(1,9)
+   while self.GameBoard[MyMove - 1] != " ":
+      MyMove = random.randint(1,9)
         
     self.GameBoard[MyMove - 1] = self.PlayerPiece
     return MyMove
@@ -52,7 +48,7 @@ class TicTacToe_Keyboard:
 def CheckForWin(CurrentBoard):
     Pieces = ["X", "O"]
 
-    for Piece in Pieces:
+   for Piece in Pieces:
         if CurrentBoard.GameBoard[0] == Piece and CurrentBoard.GameBoard[1] == Piece and CurrentBoard.GameBoard[2] == Piece:
             return Piece
     
@@ -101,7 +97,7 @@ while True:
         if AnyoneWon != " ":
             break
 
-    if AnyoneWon != " ":
+   if AnyoneWon != " ":
         print("Winner: " + AnyoneWon)
         break
 
